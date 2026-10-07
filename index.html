@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">AI</div>
+            <div>
+                <h1>AI Resume Analyzer</h1>
+                <p>Analyze your resume and improve your career profile</p>
+            </div>
+        </header>
+
+        <section class="upload-card">
+            <h2>Upload Your Resume</h2>
+            <p>Upload your PDF resume to get an instant analysis.</p>
+
+            <form id="resumeForm" enctype="multipart/form-data">
+                <label class="upload-box">
+                    <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    <span>📄 Choose Resume PDF</span>
+                </label>
+
+                <button type="submit">Analyze Resume</button>
+            </form>
+        </section>
+
+        <section id="results" class="results">
+
+            <div class="score-grid">
+
+                <div class="score-card">
+                    <h3>Resume Score</h3>
+                    <div class="score" id="resumeScore">--</div>
+                    <p>Overall Resume Quality</p>
+                </div>
+
+                <div class="score-card">
+                    <h3>ATS Score</h3>
+                    <div class="score" id="atsScore">--</div>
+                    <p>ATS Compatibility</p>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+                <h2>🧠 Skills Found</h2>
+                <div id="skillsFound"></div>
+            </div>
+
+            <div class="info-card warning">
+                <h2>⚠️ Missing / Recommended Skills</h2>
+                <div id="missingSkills"></div>
+            </div>
+
+            <div class="info-card">
+                <h2>💡 Suggestions</h2>
+                <div id="suggestions"></div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
